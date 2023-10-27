@@ -1,0 +1,178 @@
+/* 1069px and Upper - Desktop Header */
+.header {
+    position: sticky;
+    top: -0.1px;
+    left: 0;
+    z-index: 99;
+    height: 8rem;
+    width: 100%;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.navigation {
+    z-index: 100;
+    height: 8rem;
+    width: 129rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .logo-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation .logo {
+    height: 3.5rem;
+    width: auto;
+    display: flex;
+    margin-bottom: 0.4rem;
+}
+
+.navigation .navigation-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4rem;
+}
+
+.navigation .navbar {
+    display: flex;
+    gap: 4rem;
+}
+
+.navigation .navbar a {
+    font-size: 1.6rem;
+    color: var(--color-text-hover);
+    font-weight: var(--font-weight-normal);
+    transition: 0.3s;
+}
+
+.navigation .navbar a:hover {
+    color: var(--color-text-light);
+    text-shadow: 0 0 8px rgb(252, 252, 252);
+}
+
+.nav-right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#black-bar {
+    z-index: 101;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-dark);
+    display: none;
+}
+
+#nav-blackbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 4rem 5rem;
+}
+
+#nav-blackbar a {
+    line-height: 2;
+    font-size: 2.4rem;
+    color: var(--color-text-light);
+    font-weight: var(--font-weight-bold);
+}
+
+
+/*  834px - 1068px - Laptop Header */
+@media screen and (min-width: 834px) and (max-width: 1068px) {
+
+    .navigation .navigation-right {
+        gap: 3rem;
+    }
+
+    .navigation .navbar {
+        gap: 3rem;
+    }
+}
+
+
+/*  576px - 833px - Tablet Header */
+@media screen and (min-width: 576px) and (max-width: 833px) {
+
+    #btn-blackbar {
+        z-index: 101;
+        display: block;
+    }
+
+    .header {
+        height: 6rem;
+        padding: 0;
+    }
+
+    .navigation .navbar {
+        display: none;
+    }
+
+    .navigation {
+        width: 100%;
+        height: 6rem;
+        padding: 0 2.5rem;
+    }
+
+    .navigation .logo {
+        height: 3rem;
+    }
+
+    .nav-right {
+        gap: 3rem;
+    }
+}
+
+/*  575px and Lower - Mobile Header */
+@media screen and (max-width: 575px) {
+
+    #btn-blackbar {
+        z-index: 101;
+        display: block;
+    }
+
+    #nav-blackbar {
+        padding: 4rem 3rem;
+    }
+    
+    #nav-blackbar a {
+        font-size: 2rem;
+    }
+
+    .header {
+        height: 6rem;
+        padding: 0;
+    }
+
+    .navigation .navbar {
+        display: none;
+    }
+
+    .navigation {
+        width: 100%;
+        height: 6rem;
+        padding: 0 2.5rem 0 2rem;
+    }
+
+    .navigation .logo {
+        height: 2.5rem;
+    }
+}

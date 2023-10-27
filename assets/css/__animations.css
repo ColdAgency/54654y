@@ -1,0 +1,24 @@
+/* Animations */
+@keyframes FloatingImage {
+    0% {
+        transform: translateY(0rem) perspective(800px) rotateY(10deg) scale(.99) rotateX(5deg);
+    }
+
+    50% {
+        transform: translateY(0rem) perspective(800px) rotateY(10deg) scale(.99) rotateX(5deg);
+    }
+
+    100% {
+        transform: translateY(0rem) perspective(800px) rotateY(10deg) scale(.99) rotateX(5deg);
+    }
+}
+
+@keyframes ScrollingFeedbacksSlide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(var(--slide-card-width) * var(--slide-card-count) * -1));
+    }
+}
